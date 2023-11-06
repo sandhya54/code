@@ -1,0 +1,12 @@
+
+k = int(input()) 
+rooms_list = list(map(str, (input().split(' '))))
+a={}
+for rn in rooms_list:
+    if rn in a:
+        a[rn]+=1
+    else:
+        a[rn]=1
+for key in a:
+    if a[key]==1:
+        print(key)
