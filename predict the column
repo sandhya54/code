@@ -1,0 +1,17 @@
+class Solution:
+    def columnWithMaxZeros(self,arr,N):
+        row_len=len(arr)
+        col_len=len(arr[0])
+        first_col=[0]*col_len
+        for i in range(col_len):
+            c=0
+            for j in range(row_len):
+                if arr[j][i]==0:
+                    c+=1
+            first_col.append(c)
+        val=max(first_col)
+        index=first_col.index(val)
+        return index
+                
+                
+        
